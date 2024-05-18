@@ -1,12 +1,15 @@
 import './App.css';
-import SparesByCategories from './courosels/sparescategory';
-import Desknav from './navbars/desknav';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import LandingpageWrapper from './wrappers/landingpagewrap';
 
 function App() {
   return (
-    <div className="App">
-     <Desknav/>
-   {/* <SparesByCategories/> */}
+    <div className="App"> 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingpageWrapper />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
