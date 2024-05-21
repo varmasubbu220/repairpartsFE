@@ -7,10 +7,11 @@ const LandingpageWrapper=()=>{
     const handleToggle=(value)=>{
       SetToggle(value)
     }
-    return(<>
+    return(
+        <>
        {!toggle? <SparesHome toggle={toggle} toggleSetter={handleToggle} /> :<><ServiceHome toggle={toggle} toggleSetter={handleToggle}/></>}
-   
-    </>)
+         </>
+         )
 }
 
 export default LandingpageWrapper;
