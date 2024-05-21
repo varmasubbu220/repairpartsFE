@@ -1,8 +1,11 @@
+import SpVechileFilter from "../filters/spvechfilter"
 import Desknav from "../navbars/desknav"
-
-const SparesHome=()=>{
+import Switch from '../items/switch'
+const SparesHome=({toggle,toggleSetter})=>{
     return(<>
-    <Desknav/>    
+    <Desknav/>
+    <Switch toggle={toggle} toggleSetter={toggleSetter}/>
+    <SpVechileFilter/>
     </>)
 }
 export default SparesHome
