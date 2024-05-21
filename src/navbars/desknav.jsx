@@ -46,9 +46,7 @@ const Desknav = () => {
     }}>
       <div className='d-flex flex-column align-items-center' style={{ width: "26%", height: '100%' }}>
         <img src={spareslogo} alt="Repair Parts Logo" className='img-fluid' style={{ height: '95%', width: '65%', }} />
-        {/* <p className='text-white fs-6 fs-sm-2 fst-italic' style={{ fontFamily: "Jaro",  fontStyle: "normal", }}>
-         Repair Parts
-        </p> */}
+       
       </div>
       <div className='d-flex align-items-center justify-content-center justify-content-between' style={{ minWidth: "35%", height: '100%' }}>
         <input type='text' className='form-control' placeholder={`Search for  ${placeholder}`} />
