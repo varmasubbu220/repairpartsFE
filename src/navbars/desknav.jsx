@@ -16,8 +16,7 @@ const Desknav = () => {
   
     const typeEffect = () => {
       if (currentIndex === 0) {
-        // Reset placeholder to an empty string at the beginning
-        setPlaceholder('');
+              setPlaceholder('');
       }
   
       if (currentIndex <= searchList[placeholderIndex].length) {

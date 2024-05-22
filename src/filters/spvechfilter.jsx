@@ -50,7 +50,7 @@ const SpVehicleFilter = () => {
                         <option value="3">Three</option>
                     </select>
                 </div>
-                <div className="col-auto"> 
+                <div className="col-auto mb-3 mb-sm-0"> 
                 <button type="button"  className="btn btn-sm btn-info px-4"> Go </button>
                 </div>
             </div>
