@@ -25,13 +25,13 @@ const SpTopCategories = () => {
   const getChunks = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1200) {
-      return chunkArray(Spcat, 4); // 4 cards per slide for large screens
+      return chunkArray(Spcat, 4)
     } else if (screenWidth >= 992) {
-      return chunkArray(Spcat, 3); // 3 cards per slide for medium screens
+      return chunkArray(Spcat, 3); 
     } else if (screenWidth >= 768) {
-      return chunkArray(Spcat, 2); // 2 cards per slide for small screens
+      return chunkArray(Spcat, 2); 
     } else {
-      return chunkArray(Spcat, 1); // 1 card per slide for extra small screens
+      return chunkArray(Spcat, 1); 
     }
   };
 

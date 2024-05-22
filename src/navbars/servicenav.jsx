@@ -1,31 +1,57 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
+import { Nav, Navbar, Button, Offcanvas } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import servicelogo from '../asserts/servicelogo.png';
-
 import DensitySmallIcon from '@mui/icons-material/DensitySmall';
-const ServiceNav=()=>{
 
+const ServiceNav = () => {
+  const [show, setShow] = useState(false);
 
-    return(<>
-        <div className='container-fluid d-flex align-items-center justify-content-between' style={{ 
-      background: "linear-gradient(135deg, rgba(160, 222, 255, 1) 0%, rgba(0, 123, 255, 1) 100%)", 
-      height: "15vh",
-      padding: '0 20px'
-    }}>
-      <div className='d-flex flex-column align-items-center' style={{ width: "26%", height: '100%' }}>
-        <img src={servicelogo} alt="Repair Parts Logo" className='img-fluid' style={{ height: '95%', width: '65%', }} />
-       
-      </div>
-      
-      <div className='d-none d-sm-flex align-items-center justify-content-between' style={{ width: "30%", height: '100%' }}>
-    
-        <div className='w-100 h-100 d-flex align-items-center justify-content-center'>
-          <button type="button" className="btn btn-primary">Login</button>
-        </div>
-      </div>
-      <div className='d-sm-none'>
-        <DensitySmallIcon />
-      </div>
-    </div>
-    </>)
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Navbar expand="lg" style={{ 
+        background: "linear-gradient(135deg, rgba(160, 222, 255, 1) 0%, rgba(0, 123, 255, 1) 100%)", 
+        height: "15vh",
+        padding: '0 20px'
+      }}>
+        <Navbar.Brand href="/" className="d-flex align-items-center" style={{ width: "26%", height: '100%' }}>
+          <img src={servicelogo} alt="Repair Parts Logo" className='img-fluid' style={{ height: '95%', width: '65%' }} />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleShow} className="d-lg-none">
+          <DensitySmallIcon />
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between d-none d-lg-flex">
+          <Nav className="ml-auto">
+            <Nav.Link href="/" className="text-white">Home</Nav.Link>
+            <Nav.Link href="/services" className="text-white">Services</Nav.Link>
+            <Nav.Link href="/become-a-member" className="text-white">Become a Member</Nav.Link>
+            <Nav.Link href="/request-a-service" className="text-white">Request a Service</Nav.Link>
+          </Nav>
+          <Nav className="d-flex align-items-center">
+            <Button variant="primary">Login</Button>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+
+      <Offcanvas show={show} onHide={handleClose} placement="end" className="d-lg-none" style={{ background: "rgba(0, 123, 255, 0.9)" }}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Menu</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Nav className="flex-column">
+            <Nav.Link href="/" className="text-white">Home</Nav.Link>
+            <Nav.Link href="/services" className="text-white">Services</Nav.Link>
+            <Nav.Link href="/become-a-member" className="text-white">Become a Member</Nav.Link>
+            <Nav.Link href="/request-a-service" className="text-white">Request a Service</Nav.Link>
+            <Button variant="primary" className="mt-3">Login</Button>
+          </Nav>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </>
+  );
 }
+
 export default ServiceNav;
