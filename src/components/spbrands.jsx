@@ -10,7 +10,7 @@ const Spbrands = () => {
       <div className="container">
         <div className="text-start mt-3">
           <p className="h4 mb-3" style={{ fontFamily: 'cursive', color: '#007bff' }}>
-            <span style={{ color: '#0dcaf0' }}>OUR</span> Brands
+            <span style={{ color: '#0dcaf0' }}>Popular</span> Brands
           </p>
         </div>
         <div className="row justify-content-between pt-3 border rounded">
