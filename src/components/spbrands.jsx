@@ -26,11 +26,13 @@ const Spbrands = () => {
                   className="card text-center h-100 border-0 shadow-sm" 
                   style={{ 
                     transform: hoveredCard === index ? 'scale(1.05)' : 'scale(1)', 
-                    transition: 'transform 0.3s' 
+                    transition: 'transform 0.3s' ,
+                    backgroundColor:hoveredCard === index && "rgb(0, 123, 255)",
+                    color:hoveredCard === index?"white":"grey"
                   }}
                 >
                   <div className="card-body p-2">
-                    <p className="card-text" style={{ fontFamily: 'Arial, sans-serif',color:"grey" ,fontSize: '1em' }}>
+                    <p className="card-text" style={{ fontFamily: 'Arial, sans-serif' ,fontSize: '1em' }}>
                       {brand}
                     </p>
                   </div>

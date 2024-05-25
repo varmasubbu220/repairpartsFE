@@ -6,11 +6,13 @@ import two from '../asserts/two.jpg';
 import three from '../asserts/three.jpg';
 
 const ServiceCarousel = () => {
+
     return (
-        <Carousel>
+      <Carousel>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
+                  style={{height:"72vh",objectFit:"cover"}}
                     src={one}
                     alt="First slide"
                 />
@@ -19,6 +21,7 @@ const ServiceCarousel = () => {
                 <img
                     className="d-block w-100"
                     src={two}
+                    style={{height:"72vh",objectFit:"cover"}}
                     alt="Second slide"
                 />
             </Carousel.Item>
@@ -26,15 +29,11 @@ const ServiceCarousel = () => {
                 <img
                     className="d-block w-100"
                     src={three}
+                    style={{height:"72vh",objectFit:"cover"}}
                     alt="Third slide"
                 />
-                {/* <Carousel.Caption>
-                    <h3>Third Slide Label</h3>
-                    <p>Third slide description.</p>
-                </Carousel.Caption> */}
             </Carousel.Item>
         </Carousel>
     );
 }
-
 export default ServiceCarousel;

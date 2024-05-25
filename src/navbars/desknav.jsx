@@ -22,7 +22,7 @@ const Desknav = () => {
 
       if (currentIndex <= searchList[placeholderIndex].length) {
         setPlaceholder(prevPlaceholder => searchList[placeholderIndex].slice(0, currentIndex));
-        currentIndex++;
+        currentIndex++; 
         typingTimer = setTimeout(typeEffect, 200);
       } else {
         setPlaceholder('');
