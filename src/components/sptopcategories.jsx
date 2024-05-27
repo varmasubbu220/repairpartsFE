@@ -15,7 +15,6 @@ const SpTopCategories = () => {
     { item: "clutch", img: "https://tiimg.tistatic.com/fp/1/007/736/corrosion-free-clutch-assembly-hornet-for-biike-spare-parts-packaging-295.jpg" },
     { item: "brake", img: "https://www.frontechchina.com/wp-content/uploads/2019/06/pad-kit.jpg" }
   ];
-
   const chunkArray = (array, chunkSize) => {
     const chunks = [];
     for (let i = 0; i < array.length; i += chunkSize) {
@@ -58,8 +57,8 @@ const SpTopCategories = () => {
             <div className="row">
               {chunk.map((category, idx) => (
                 <div key={idx} className="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
-                  <div className="h-100 text-center rounded">
-                    <img src={category.img} className="card-img-top rounded-circle mx-auto d-block mt-3" alt={category.item} style={{ width: '100px', height: '100px' }} />
+                  <div className="h-100 text-center rounded ">
+                    <img src={category.img} className="card-img-top rounded-circle mx-auto d-block mt-3 hover-border" alt={category.item} style={{ width: '100px', height: '100px' }} />
                     <div className="card-body">
                       <h5 className="card-title">{category.item}</h5>
                     </div>
@@ -70,6 +69,11 @@ const SpTopCategories = () => {
           </Carousel.Item>
         ))}
       </Carousel>
+      <style jsx>{`
+        .hover-border:hover {
+          border: 4px solid rgb(0, 123, 255);
+        }
+      `}</style>
     </div>
   );
 };
