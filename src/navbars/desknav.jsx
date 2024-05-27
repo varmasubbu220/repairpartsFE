@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Nav, Navbar, Button, Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faHeart, faBars } from '@fortawesome/free-solid-svg-icons';
-import spareslogo from '../asserts/spareslogo.png';
+import spareslogo from '../asserts/NavRParts.png';
 import DensitySmallIcon from '@mui/icons-material/DensitySmall';
 
 const Desknav = () => {
@@ -45,9 +45,10 @@ const Desknav = () => {
         height: "15vh",
         padding: '0 20px'
       }}>
-        <div className='d-flex flex-column align-items-center' style={{ width: "26%", height: '100%' }}>
-          <img src={spareslogo} alt="Repair Parts Logo" className='img-fluid' style={{ height: '95%', width: '65%' }} />
-        </div>
+    <div className='d-flex flex-column align-items-center' style={{ width: "20%", height: '15vh' }}>
+    <img src={spareslogo} alt="Repair Parts Logo" className='img-fluid' style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+     </div>
+
         <div className='d-none d-lg-flex align-items-center justify-content-center' style={{ minWidth: "35%", height: '100%' }}>
           <input type='text' className='form-control' placeholder={`Search for ${placeholder}`} />
           <button type="button" className="btn btn-"><FontAwesomeIcon icon={faSearch} /></button>
