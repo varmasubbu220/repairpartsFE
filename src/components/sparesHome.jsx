@@ -4,6 +4,7 @@ import Switch from '../items/switch'
 import Spbrands from "./spbrands"
 import SpTopCategories from "./sptopcategories"
 import Counts from "./counts"
+import Footer from "../Footer/Footer"
 const SparesHome=({toggle,toggleSetter})=>{
     return(<>
     <Desknav/>
@@ -11,7 +12,8 @@ const SparesHome=({toggle,toggleSetter})=>{
     <SpVechileFilter/>
     <Counts/>
     <Spbrands/>
-    <SpTopCategories/>
+    <SpTopCategories />
+    <Footer/>
     </>)
 }
 export default SparesHome
