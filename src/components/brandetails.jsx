@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../Footer/Footer';
 
 const BrandDetails = () => {
     const { brandName } = useParams();
@@ -15,7 +16,7 @@ const BrandDetails = () => {
         alert(`${part} added to cart`);
     };
 
-    return (
+    return (<>
         <div className="container mt-4">
             <div className="text-start">
                 <p className="h3 mb-3" style={{ fontFamily: 'Georgia, serif', color: '#343a40' }}>
@@ -50,7 +51,8 @@ const BrandDetails = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        
+        </div>    <Footer/></>
     );
 };
 

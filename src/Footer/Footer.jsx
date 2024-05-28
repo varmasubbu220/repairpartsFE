@@ -9,7 +9,7 @@ const Footer = () => {
   <section className="bg-black text-white py-4 py-md-5 py-xl-8 border-top border-light">
     <div className="container overflow-hidden">
       <div className="row gy-4 gy-lg-0 justify-content-xl-between">
-        <div className="col-12 col-md-4 col-lg-3 col-xl-2">
+        <div className="col-12 col-md-4 col-lg-3 col-xl-2 d-sm-flex d-none">
           <div className="widget">
             <a href="#!">
               <img src={Footerlogo} alt="BootstrapBrain Logo" width="175" />

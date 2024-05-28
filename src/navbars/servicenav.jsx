@@ -3,7 +3,7 @@ import { Nav, Navbar, Button, Offcanvas } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import servicelogo from '../asserts/servicelogo.png';
 import DensitySmallIcon from '@mui/icons-material/DensitySmall';
-
+import spareslogo from '../asserts/NavRParts.png';
 const ServiceNav = () => {
   const [show, setShow] = useState(false);
 
@@ -18,7 +18,7 @@ const ServiceNav = () => {
         padding: '0 20px'
       }}>
         <Navbar.Brand href="/" className="d-flex align-items-center" style={{ width: "26%", height: '100%' }}>
-          <img src={servicelogo} alt="Repair Parts Logo" className='img-fluid' style={{ height: '95%', width: '65%' }} />
+          <img src={spareslogo} alt="Repair Parts Logo" className='img-fluid' style={{ height: '95%', width: '65%' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleShow} className="d-lg-none">
           <DensitySmallIcon />
