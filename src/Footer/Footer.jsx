@@ -1,8 +1,10 @@
 import React from 'react';
 import Footerlogo from '../../src/asserts/FooterRParts.png'
+import Clients from './Clients';
 const Footer = () => {
   return (
     <div >
+      <Clients/>
 <footer className="footer bg-black" >
   <section className="bg-black text-white py-4 py-md-5 py-xl-8 border-top border-light">
     <div className="container overflow-hidden">
