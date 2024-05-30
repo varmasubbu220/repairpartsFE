@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingpageWrapper from './wrappers/landingpagewrap';
 import BrandDetails from './components/brandetails';
+import Login from './components/login';
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingpageWrapper />} />
-          <Route path="/brand/:brandName" element={<BrandDetails/>} />
+          <Route path="/brand/:brandName" element={<BrandDetails/>} /> 
+          <Route path='/auth' element={<Login/>}/>
         </Routes>
       </BrowserRouter>
     </div>
@@ -17,3 +19,4 @@ function App() {
 }
 
 export default App;
+  

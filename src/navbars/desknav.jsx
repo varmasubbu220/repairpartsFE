@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faHeart, faBars } from '@fortawesome/free-solid-svg-icons';
 import spareslogo from '../asserts/NavRParts.png';
 import DensitySmallIcon from '@mui/icons-material/DensitySmall';
+import { useNavigate } from 'react-router-dom';
 
 const Desknav = () => {
   const searchList = ["timing Chain", "Gear Rod", "Wheel", "Break Pad"];
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [placeholder, setPlaceholder] = useState("");
   const [show, setShow] = useState(false);
-
+const navigate=useNavigate()
   useEffect(() => {
     let currentIndex = 0;
     let typingTimer;
@@ -56,7 +57,7 @@ const Desknav = () => {
         <div className='d-none d-lg-flex align-items-center justify-content-between' style={{ width: "30%", height: '100%' }}>
           <button type="button" className="btn btn-"><FontAwesomeIcon icon={faHeart} /></button>
           <div className='w-100 h-100 d-flex align-items-center justify-content-center'>
-            <button type="button" className="btn btn-primary">Login</button>
+            <button type="button" className="btn btn-primary" onClick={()=>navigate('/auth')}>Login</button>
           </div>
         </div>
         <div className='d-lg-none'>
@@ -73,7 +74,7 @@ const Desknav = () => {
             <Nav.Link href="/" className="text-white">Home</Nav.Link>
             <Nav.Link href="/wishlist" className="text-white">Wishlist</Nav.Link>
             <Nav.Link href="/my-orders" className="text-white">My Orders</Nav.Link>
-            <Button variant="primary" className="mt-3">Login</Button>
+            <Button variant="primary" className="mt-3" onClick={()=>navigate('/auth')}>Login</Button>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>

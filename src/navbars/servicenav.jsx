@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import servicelogo from '../asserts/servicelogo.png';
 import DensitySmallIcon from '@mui/icons-material/DensitySmall';
 import spareslogo from '../asserts/NavRParts.png';
+import { useNavigate } from 'react-router-dom';
 const ServiceNav = () => {
   const [show, setShow] = useState(false);
-
+  const navigate=useNavigate()
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -31,7 +32,7 @@ const ServiceNav = () => {
             <Nav.Link href="/request-a-service" className="text-white">Request a Service</Nav.Link>
           </Nav>
           <Nav className="d-flex align-items-center">
-            <Button variant="primary">Login</Button>
+            <Button variant="primary" onClick={()=>navigate('/auth')}>Login</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -46,7 +47,7 @@ const ServiceNav = () => {
             <Nav.Link href="/services" className="text-white">Services</Nav.Link>
             <Nav.Link href="/become-a-member" className="text-white">Become a Member</Nav.Link>
             <Nav.Link href="/request-a-service" className="text-white">Request a Service</Nav.Link>
-            <Button variant="primary" className="mt-3">Login</Button>
+            <Button variant="primary" className="mt-3" onClick={()=>navigate('/auth')}>Login</Button>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
