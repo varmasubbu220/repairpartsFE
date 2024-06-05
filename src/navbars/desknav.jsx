@@ -10,7 +10,7 @@ const Desknav = () => {
   const searchList = ["timing Chain", "Gear Rod", "Wheel", "Break Pad"];
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [placeholder, setPlaceholder] = useState("");
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false); 
 const navigate=useNavigate()
   useEffect(() => {
     let currentIndex = 0;
