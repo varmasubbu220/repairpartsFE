@@ -1,7 +1,9 @@
 import React from 'react';
 import Footerlogo from '../../src/asserts/FooterRParts.png'
 import Clients from './Clients';
+import { useNavigate } from 'react-router-dom';
 const Footer = () => {
+  const navigate=useNavigate()
   return (
     <div >
       <Clients/>
@@ -33,7 +35,7 @@ const Footer = () => {
             <h4 className="widget-title mb-4">Learn More</h4>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="#!" className="link-secondary text-decoration-none">About</a>
+                <a href="#!" className="link-secondary text-decoration-none" onClick={()=>navigate("/about")}>About</a>
               </li>
               <li className="mb-2">
                 <a href="#!" className="link-secondary text-decoration-none">Contact</a>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SpTopCategories = () => {
   const defaultImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnEv5aBfQgq7h39_P_mrzHsx3laKylNn52bGJSQeus7A&s';
@@ -56,14 +57,16 @@ const SpTopCategories = () => {
           <Carousel.Item key={index}>
             <div className="row">
               {chunk.map((category, idx) => (
-                <div key={idx} className="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
-                  <div className="h-100 text-center rounded ">
-                    <img src={category.img} className="card-img-top rounded-circle mx-auto d-block mt-3 hover-border" alt={category.item} style={{ width: '100px', height: '100px' }} />
-                    <div className="card-body">
-                      <h5 className="card-title">{category.item}</h5>
-                    </div>
-                  </div>
-                </div>
+                 <div key={idx} className="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+                 <Link to={`/category/${category.item}`} className="text-decoration-none">
+                   <div className="h-100 text-center rounded">
+                     <img src={category.img} className="card-img-top rounded-circle mx-auto d-block mt-3 hover-border" alt={category.item} style={{ width: '100px', height: '100px' }} />
+                     <div className="card-body">
+                       <h5 className="card-title">{category.item}</h5>
+                     </div>
+                   </div>
+                 </Link>
+               </div>
               ))}
             </div>
           </Carousel.Item>

@@ -64,7 +64,6 @@ const navigate=useNavigate()
           <DensitySmallIcon onClick={handleShow} />
         </div>
       </div>
-
       <Offcanvas show={show} onHide={handleClose} placement="end" className="d-lg-none" style={{ background: "rgba(0, 123, 255, 0.9)" }}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
